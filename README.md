@@ -11,7 +11,7 @@ I have setup
 
 - Node >=6 - I Recommend using [nvm (Mac/Linux)](https://github.com/creationix/nvm) or [nvm for Windows](https://github.com/coreybutler/nvm-windows))
 - .NET Core SDK - Download and install from the [.NET Core Homepage](https://www.microsoft.com/net/core)
-- Set the ASPNETCORE_ENVIRONEMENT=Development on your system
+- Set the ASPNETCORE_ENVIRONMENT=Development on your system
 
 ### Running the server
 
