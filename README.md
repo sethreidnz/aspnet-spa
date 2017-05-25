@@ -1,4 +1,4 @@
-# Dotnet SPA
+# ASPNET Core SPA
 
 This is an example project showing you how to get up and running with ASPNET Core to serve up a single page app (SPA). It takes advantage
 of the Owin pipeline to serve up the output of the client applications build proceess in from the wwwroot of the server application.
