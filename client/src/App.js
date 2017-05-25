@@ -22,7 +22,7 @@
               <img src={logo} className="App-logo" alt="logo" />
               <h2>Welcome to React</h2>
             </div>
-            <ul>
+            <ul style={{paddingLeft:0}}>
               {values.map((value)=>(
                 <li style={{'listStyle': 'none'}} key={value}>
                   {value}
