@@ -1,7 +1,7 @@
 # ASPNET Core SPA
 
 This is an example project showing you how to get up and running with ASPNET Core to serve up a single page app (SPA). It takes advantage
-of the Owin pipeline to serve up the output of the client applications build proceess in from the wwwroot of the server application.
+of the Owin pipeline to serve up the output of the client applications build process in from the wwwroot of the server application.
 
 I have setup 
 
@@ -37,7 +37,7 @@ Open the folder in Visual Studio Code and press F5 to launch
 
 > **NOTE:** This is an out of the box app created using `dotnet create webapi` with some changes to the Startup.cs to include
 > handling of CORS requests from our client during development and serving the client app and passing through client routing to the app
-> using a simple peice of middleware and the 'Microsoft.AspNetCore.StaticFiles' Nuget package.
+> using a simple piece of middleware and the 'Microsoft.AspNetCore.StaticFiles' Nuget package.
 
 ### Running the client
 
@@ -49,7 +49,7 @@ npm install
 npm start
 ```
 
-> **NOTE:** During development the client is using the API at [http://localhost:3000](http://localhost:3000) because of the '.env.developement' file that
+> **NOTE:** During development the client is using the API at [http://localhost:3000](http://localhost:3000) because of the '.env.development' file that
 > defines this and is determined in the file '/client/api/apiConfig'. For more details see [the Create React App Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-development-environment-variables-in-env)
 
 ## Creating production build
