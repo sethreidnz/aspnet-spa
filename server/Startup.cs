@@ -9,9 +9,6 @@ namespace DotnetSpa
 {
    public class Startup
     {
-        public IConfigurationRoot Configuration { get; }
-        public IHostingEnvironment HostingEnvironment { get; private set; }
-
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -22,17 +19,18 @@ namespace DotnetSpa
             HostingEnvironment = env;
             Configuration = builder.Build();
         }
+        public IHostingEnvironment HostingEnvironment { get; private set; }
+        public IConfigurationRoot Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            if (HostingEnvironment.IsDevelopment())
-            {
-                services.AddCors(options => options.AddPolicy("AllowAll", 
-                    p => p.WithOrigins("http://localhost:3000")
-                    .AllowCredentials()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()));
-            }
+    if (HostingEnvironment.IsDevelopment())
+    {
+        services.AddCors(options => options.AddPolicy("AllowDevelopment", 
+            p => p.WithOrigins("http://localhost:3000")
+            .AllowAnyMethod()
+            .AllowAnyHeader()));
+    }
             services.AddOptions();
             services.AddMvc();
         }
@@ -41,17 +39,12 @@ namespace DotnetSpa
             IHostingEnvironment env,
             ILoggerFactory loggerFactory)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseStatusCodePages();
-            }
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
             
-            
             if (HostingEnvironment.IsDevelopment())
             {
-                app.UseCors("AllowAll");
+                app.UseCors("AllowDevelopment");
             }
 
             DefaultFilesOptions options = new DefaultFilesOptions();
