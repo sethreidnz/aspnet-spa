@@ -24,13 +24,13 @@ namespace DotnetSpa
 
         public void ConfigureServices(IServiceCollection services)
         {
-    if (HostingEnvironment.IsDevelopment())
-    {
-        services.AddCors(options => options.AddPolicy("AllowDevelopment", 
-            p => p.WithOrigins("http://localhost:3000")
-            .AllowAnyMethod()
-            .AllowAnyHeader()));
-    }
+        if (HostingEnvironment.IsDevelopment())
+        {
+            services.AddCors(options => options.AddPolicy("AllowDevelopment", 
+                p => p.WithOrigins("http://localhost:3000")
+                .AllowAnyMethod()
+                .AllowAnyHeader()));
+        }
             services.AddOptions();
             services.AddMvc();
         }
