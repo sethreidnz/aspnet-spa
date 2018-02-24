@@ -3,7 +3,9 @@
 This is an example project showing you how to get up and running with ASPNET Core to serve up a single page app (SPA). It takes advantage
 of the Owin pipeline to serve up the output of the client applications build process in from the wwwroot of the server application.
 
-I have setup 
+Here is the tutorial that explains how this works:
+
+[https://sethreid.co.nz/delivering-single-page-apps-aspnet-core/](https://sethreid.co.nz/delivering-single-page-apps-aspnet-core/)
 
 ## Quick start
 
